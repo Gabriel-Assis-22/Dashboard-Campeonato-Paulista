@@ -151,7 +151,7 @@ if "Club" in df.columns:
     # Filtrar o DataFrame com base nos checkboxes
     if exibir_serie_a1:
         df = df[df["Club"].isin(serie_a1_normalizado)]
-        st.success(f"Exibindo {len(df)} times da Série A1.")
+        st.success(f"Exibindo {len(df)} times da Série A.")
     elif exibir_serie_a2:
         df = df[df["Club"].isin(serie_a2_normalizado)]
         st.success(f"Exibindo {len(df)} times da Série A2.")
@@ -305,3 +305,5 @@ if exibir_taxa_de_vitorias and {"Won", "Matches"}.issubset(df.columns):
 # // --------------------------------------------------------------
 # //    "Programando como um herói, com a força da mente!"
 # // --------------------------------------------------------------
+
+# steamlit run dashboard_Fut.py

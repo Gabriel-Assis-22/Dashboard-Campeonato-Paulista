@@ -6,7 +6,7 @@ import plotly.express as px
 st.set_page_config(layout="wide", page_title="Dashboard Campeonato Paulista")
 
 # Caminho do arquivo CSV
-caminho_arquivo = r"C:\Users\Cleitinho\Documents\GitHub\Dashboard-Campeonato-Paulista\campeonato_paulista_ranking_historico.csv"
+caminho_arquivo = r"C:\Users\gabri\OneDrive\Documentos\GitHub\Dashboard-Campeonato-Paulista\campeonato_paulista_ranking_historico.csv"
 
 # Inicializa o DataFrame
 df = None

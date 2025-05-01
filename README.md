@@ -43,7 +43,7 @@ streamlit run app.py
 
 - Filtro por divisões (Série A, A2, A3 e B)
 
- **Resumo geral de:**
+**Resumo geral de:**
 
 - Total de Pontos
 

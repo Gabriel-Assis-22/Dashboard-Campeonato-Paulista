@@ -292,4 +292,18 @@ if exibir_taxa_de_vitorias and {"Won", "Matches"}.issubset(df.columns):
     fig_taxa_vitorias.update_layout(xaxis_title="Clube", yaxis_title="Taxa de Vitórias (%)", title_x=0.5)
     st.plotly_chart(fig_taxa_vitorias, use_container_width=True, key="taxa_de_vitorias")
     
+#     // --------------------------------------------------------------
+# //    __/\__       ________    _______   _______________
+# //   |      |     /        \  /       \ |               |
+# //   |  (°.°) |   |  CLEITON | |  FULL  | |    CODE      |
+# //   |   /|\   |   | RODRIGUES| |STACK   | |  MASTER    |
+# //   |   / \   |   |_________| |_______| |_______________|
+# //    \______/    __|_______|______________________________|
+# //    |   |      /    |      |    \         /    |        \
+# //   /     \    /     |      |     \_______/     |         \
+# //  /_______\  /______|______|______\___/_______|___________\
+# // --------------------------------------------------------------
+# //    "Programando como um herói, com a força da mente!"
+# // --------------------------------------------------------------
+
 # steamlit run dashboard_Fut.py

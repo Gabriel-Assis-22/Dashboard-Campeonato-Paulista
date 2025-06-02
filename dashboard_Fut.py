@@ -14,7 +14,7 @@ df = None
 # Tenta carregar o arquivo CSV
 try:
     df = pd.read_csv(caminho_arquivo, sep=";", decimal=",", encoding="latin1")
-    # Exibe uma notificação temporária
+
     st.toast("Arquivo carregado com sucesso!", icon="✅")
 except FileNotFoundError:
     st.error("Arquivo não encontrado. Verifique o nome e o caminho.")
@@ -23,19 +23,16 @@ except PermissionError:
 except Exception as e:
     st.error(f"Erro ao carregar o arquivo: {e}")
 
-# Só continuar se o DataFrame foi carregado corretamente
 if df is not None:
 
-    # Filtros na barra lateral
     st.sidebar.title("Desenvolvido por:")
     st.sidebar.info("Cleiton Rodrigues, Douglas Mariano, Gabriel Roberto e Lysis Relvas")
     st.sidebar.title("Filtros")
 
-# Filtro por time
+
 if "Club" in df.columns:
     st.sidebar.markdown("### Filtro por Times")
-    
-    # Checkbox para selecionar todos os times
+
     selecionar_todos = st.sidebar.checkbox("Selecionar todos os times", value=True)
 
     if selecionar_todos:
@@ -291,19 +288,5 @@ if exibir_taxa_de_vitorias and {"Won", "Matches"}.issubset(df.columns):
     fig_taxa_vitorias.update_traces(texttemplate="%{text:.2f}%", textposition="outside")
     fig_taxa_vitorias.update_layout(xaxis_title="Clube", yaxis_title="Taxa de Vitórias (%)", title_x=0.5)
     st.plotly_chart(fig_taxa_vitorias, use_container_width=True, key="taxa_de_vitorias")
-    
-#     // --------------------------------------------------------------
-# //    __/\__       ________    _______   _______________
-# //   |      |     /        \  /       \ |               |
-# //   |  (°.°) |   |  CLEITON | |  FULL  | |    CODE      |
-# //   |   /|\   |   | RODRIGUES| |STACK   | |  MASTER    |
-# //   |   / \   |   |_________| |_______| |_______________|
-# //    \______/    __|_______|______________________________|
-# //    |   |      /    |      |    \         /    |        \
-# //   /     \    /     |      |     \_______/     |         \
-# //  /_______\  /______|______|______\___/_______|___________\
-# // --------------------------------------------------------------
-# //    "Programando como um herói, com a força da mente!"
-# // --------------------------------------------------------------
 
 # steamlit run dashboard_Fut.py
